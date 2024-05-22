@@ -15,4 +15,13 @@ class PageController extends Controller
         ];
         return view('home', $data);
     }
+
+    public function departures()
+    {
+        $trains = Train::whereDate('departure_time', today())->get();
+        $data = [
+            'trains' => $trains,
+        ];
+        return view('home', $data);
+    }
 }
