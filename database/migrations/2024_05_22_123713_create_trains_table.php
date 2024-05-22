@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('arrival_station', 100);
             $table->time('departure_time', $precision = 0);
             $table->time('arrival_time', $precision = 0);
-            $table->string('train_code', 50);
+            $table->string('train_code', 10);
             $table->tinyInteger('carriages_number')->unsigned()->nullable();
             $table->tinyInteger('is_ontime')->unsigned()->default(1);
             $table->tinyInteger('is_canceled')->unsigned()->default(0);
