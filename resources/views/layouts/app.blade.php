@@ -14,6 +14,21 @@
     @vite('resources/js/app.js')
 
 </head>
-<main>
-    @yield('main-content')
-</main>
+
+<body>
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="navbar-brand fw-bold">Railway Station</div>
+                <div class="hstack gap-3">
+                    <a class="badge text-bg-info p-2" href="{{ route('departures') }}">Today's Departures</a>
+                    <a class="badge text-bg-secondary p-2" href="/">Show All</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @yield('main-content')
+    </main>
+</body>
